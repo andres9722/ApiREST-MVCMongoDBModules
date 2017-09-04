@@ -1,0 +1,17 @@
+extends layout.pug
+
+block content
+	section
+		h1= title
+		article
+			form(method="post", action="/api/communities/")
+				fieldset
+					div
+						input(type="text", name="name", placeholder="Name", required)
+					div
+						input(type="text", name="type", placeholder="Type", required)
+					div
+						input(type="text", name="description", placeholder="Description", required)
+					div
+						input(type="submit", value="Agregar")
+		a(href="/api/communities/") Inicio

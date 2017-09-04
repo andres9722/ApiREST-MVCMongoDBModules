@@ -1,0 +1,7 @@
+extends layout.pug
+
+block content
+    h1 Error N° #{error.status}:
+    h2= error.statusText
+    a(href="/api/communities/") Inicio
+    pre #{error.stack}

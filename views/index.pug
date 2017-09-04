@@ -1,0 +1,20 @@
+extends layout.pug
+
+block content
+    h1.title COMMUNITIES
+    div
+        a.button-add(href="/api/communities/add") Agregar
+    section.container   
+        if(data.length)
+            each community in data   
+                article.data  
+                    p.data-content #{community}
+                    div 
+                        a.button-add.edit(href="/api/communities/edit/" + community._id) Editar
+                        a.button-add.edit(href="/api/communities/delete/" + community._id) bai
+                    p 
+                        form(method="post", action="/api/communities/delete/" + community._id)
+                            input(type="hidden", name="_method", value="DELETE")
+                            input.button-add.delete(type="submit", value="Eliminar")        
+        else
+            div No tienes contactos que mostrar

@@ -1,0 +1,23 @@
+{
+  "name": "apirestmongodbmodules",
+  "version": "1.0.0",
+  "description": "En este proyecto desarrollaremos una aplicación REST-MVC con Express, MongoDB y Node.js",
+  "main": "server.js",
+  "scripts": {
+    "start": "supervisor server.js"
+  },
+  "author": "Andres Alvarez",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "express-method-override": "0.0.3",
+    "mongoose": "^4.11.9",
+    "morgan": "^1.8.2",
+    "pug": "^2.0.0-rc.3",
+    "serve-favicon": "^2.4.3"
+  },
+  "devDependencies": {
+    "supervisor": "^0.12.0"
+  }
+}
